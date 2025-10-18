@@ -23,9 +23,9 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#131759ff",
-      light: "#041f6aff",
-      dark: "#040c66ff",
+      main: "#000D94",
+      light: "#000D94",
+      dark: "#010642ff",
     },
     background: {
       default: "#ecf0f7ff",
@@ -117,7 +117,7 @@ export default function CanteenHomepage() {
                 letterSpacing: "-0.02em",
               }}
             >
-              C28 Canteen
+              TC Canteen
             </Typography>
             <Typography
               variant="h6"

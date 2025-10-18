@@ -16,6 +16,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+import logo from "../assets/LogoTCCanteenWhite.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -55,7 +56,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        background: "linear-gradient(45deg, #050163ff, #2c96c1ff)",
+        background: "linear-gradient(45deg, #232fd4ff, #000D94)",
         color: "white",
         pt: 6,
         pb: 3,
@@ -68,15 +69,22 @@ export default function Footer() {
           <Grid item xs={12} md={4}>
             <Box sx={{ mb: 2 }}>
               <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                <RestaurantMenuIcon sx={{ fontSize: 40, mr: 1 }} />
+                <img
+                  src={logo}
+                  alt="logo"
+                  style={{ width: 40, height: "auto",  cursor: "pointer" }}
+                  onClick={() => navigate("/")}
+                />
                 <Typography
                   variant="h5"
                   sx={{
                     fontWeight: 800,
                     fontFamily: '"Poppins", sans-serif',
+                    mt: 0.5,
+                    ml: 0.5
                   }}
                 >
-                  C28 Canteen
+                  TC Canteen
                 </Typography>
               </Box>
               <Typography
@@ -221,7 +229,7 @@ export default function Footer() {
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 <EmailIcon sx={{ mr: 1, fontSize: 20 }} />
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  info@c28canteen.com
+                  info@tccanteen.com
                 </Typography>
               </Box>
             </Stack>
@@ -253,7 +261,7 @@ export default function Footer() {
               textAlign: { xs: "center", sm: "left" },
             }}
           >
-            © {currentYear} C28 Canteen. All rights reserved.
+            © {currentYear} TC Canteen. All rights reserved.
           </Typography>
 
           <Stack
@@ -292,19 +300,6 @@ export default function Footer() {
               </React.Fragment>
             ))}
           </Stack>
-        </Box>
-
-        {/* Made with love section */}
-        <Box sx={{ textAlign: "center", mt: 3 }}>
-          <Typography
-            variant="body2"
-            sx={{
-              opacity: 0.7,
-              fontSize: "0.85rem",
-            }}
-          >
-            Made with ❤️ for food lovers
-          </Typography>
         </Box>
       </Container>
     </Box>

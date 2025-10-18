@@ -22,6 +22,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
 import CartPopup from "./Order";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/LogoCanteenTC.png";
 
 export default function Navbar({
   searchQuery,
@@ -65,16 +66,24 @@ export default function Navbar({
     >
       <Toolbar sx={{ py: 1 }}>
         {/* LOGO */}
+        <img
+          src={logo}
+          alt="logo"
+          style={{ width: 40, height: "auto",  cursor: "pointer" }}
+          onClick={() => navigate("/")}
+        />
         <Typography
           variant="h5"
           sx={{
             fontWeight: 700,
             color: "primary.main",
             cursor: "pointer",
+            mt: 0.5,
+            ml: 0.5
           }}
           onClick={() => navigate("/")}
         >
-          CanteenTC
+          Canteen
         </Typography>
 
         <Box sx={{ flexGrow: 1 }} />
